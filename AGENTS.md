@@ -1,0 +1,1 @@
+1. Generując kod, postaraj się nie dodawać do niego komentarzy. Generowany kod powinien być na tyle czytelny i jednoznaczny, aby nie potrzebował komentarzy.
