@@ -1,13 +1,11 @@
-import json
 from openai import OpenAI
 from fastapi import HTTPException
-from .config import OPENAI_API_KEY
 from .models import AnalysisResponse
 
-client = OpenAI(api_key=OPENAI_API_KEY)
-
-async def analyze_cv_with_gpt(cv_text: str, job_description: str) -> AnalysisResponse:
+async def analyze_cv_with_gpt(cv_text: str, job_description: str, api_key: str) -> AnalysisResponse:
     try:
+        client = OpenAI(api_key=api_key)
+        
         prompt = f"""
 Jesteś ekspertem HR i rekruterem IT. Przeanalizuj CV kandydata względem oferty pracy i przygotuj szczegółową ocenę.
 

@@ -60,7 +60,8 @@ async def upload_cv(file: UploadFile = File(...)):
 @router.post("/analyze", response_model=AnalysisResponse)
 async def analyze_cv(
     cv_text: str = Form(...),
-    job_description: str = Form(...)
+    job_description: str = Form(...),
+    api_key: str = Form(...)
 ):
     if not cv_text.strip():
         raise HTTPException(status_code=400, detail="CV nie może być puste")
@@ -68,8 +69,11 @@ async def analyze_cv(
     if not job_description.strip():
         raise HTTPException(status_code=400, detail="Opis oferty pracy nie może być pusty")
     
+    if not api_key.strip():
+        raise HTTPException(status_code=400, detail="Klucz API nie może być pusty")
+    
     try:
-        analysis = await analyze_cv_with_gpt(cv_text, job_description)
+        analysis = await analyze_cv_with_gpt(cv_text, job_description, api_key)
         return analysis
     except HTTPException:
         raise
