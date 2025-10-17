@@ -5,7 +5,7 @@ Backend API dla aplikacji Career Coach zbudowany w **Python + FastAPI**.
 ## 🚀 Technologie
 
 - **Framework:** FastAPI
-- **Python:** 3.9+
+- **Python:** 3.13+
 - **Server:** Uvicorn
 - **Database:** PostgreSQL (Supabase)
 - **Deployment:** Render
@@ -62,12 +62,7 @@ Aplikacja będzie dostępna pod adresem: `http://localhost:8000`
 
 ## 📝 Zmienne środowiskowe
 
-W produkcji ustaw następujące zmienne:
-
-```
-DATABASE_URL=postgresql://postgres:[PASSWORD]@db.[PROJECT].supabase.co:5432/postgres
-ENVIRONMENT=production
-```
+Backend nie wymaga ustawienia klucza OpenAI w .env. Klucz jest przekazywany z frontendu przez użytkownika w formularzu. Możesz zachować zmienne takie jak `ENVIRONMENT` według potrzeb.
 
 ## 🔗 Linki
 

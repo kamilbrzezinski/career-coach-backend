@@ -1,2 +1,2 @@
-# OpenAI API Key
-OPENAI_API_KEY=your_openai_api_key_here
+# Example environment variables (no OpenAI key required)
+ENVIRONMENT=development
