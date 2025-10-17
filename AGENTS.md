@@ -1,1 +1,2 @@
 1. Generując kod, postaraj się nie dodawać do niego komentarzy. Generowany kod powinien być na tyle czytelny i jednoznaczny, aby nie potrzebował komentarzy.
+2. Najnowszy model od OpenAI to GPT-5. Używaj go wszędzie tam, gdzie to możliwe. Są również dostępne tańsze modele gpt-5-mini oraz gpt-5-nano.
